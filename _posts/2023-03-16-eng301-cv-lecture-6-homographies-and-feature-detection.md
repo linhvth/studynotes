@@ -3,6 +3,7 @@ layout: post
 title:  ENG 301 - Computer Vision - Lecture 6 - Homography and Feature Detection
 date:   2023-03-16
 categories: computer-vision
+permalink: /computer-vision/eng301-cv/lecture-6/
 ---
 
 ### Table of Contents
