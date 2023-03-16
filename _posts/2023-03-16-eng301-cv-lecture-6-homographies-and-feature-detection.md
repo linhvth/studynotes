@@ -52,7 +52,7 @@ $$
 <summary>Detailed calculation for rotation</summary>
 
  <p align="center">
- 	<img src="{{ site.url }}/assets/images/eng301-cv/l6-2d-rotation.png" alt="drawing" width="500" class="center"/>
+ 	<img src="/studynotes/assets/images/eng301-cv/l6-2d-rotation.png" alt="drawing" width="500" class="center"/>
  </p>
 
 $$x = r\cos{\phi} \\ y = r\sin{\phi} 
@@ -83,13 +83,13 @@ Composing Transformation is the process of applying several transformation in su
 - [Affine](#affine-transformation) (Similarity + shearing)
 - Projective (Affine + projective wraps)
 
- <p align="center">
-    <img src="{{ site.url }}/assets/images/eng301-cv/l6-class-2d-trans.png" alt="drawing" width="500" class="center"/>
- </p>
+<p align="center">
+    <img src="/studynotes/assets/images/eng301-cv/l6-class-2d-trans.png" alt="drawing" width="500" class="center"/>
+</p>
 
-  <p align="center">
-    <img src="{{ site.url }}/assets/images/eng301-cv/l6-diff-trans-wrap-cmu.png" alt="drawing" width="500" class="center"/>
- </p>
+<p align="center">
+    <img src="/studynotes/assets/images/eng301-cv/l6-diff-trans-wrap-cmu.png" alt="drawing" width="500" class="center"/>
+</p>
 
 **Important Note:** Matrix Multiplication is associative, but not commutative. The 2 composing transformation $$\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$$ (some cases $$\mathbf{A}\mathbf{B} = \mathbf{B}\mathbf{A}$$ such as performing rotation twice).
 
@@ -98,24 +98,25 @@ Composing Transformation is the process of applying several transformation in su
 <details>
 <summary>Why do we want to use 3x3 matrix representation?</summary>
 
-- Translation is non-linear transformation while Rotation, Scaling, and Shearing are linear transformations. Thus, we need a way to manipulate it => Homogeneous Coordinates. 
+- Transformations. Thus, we need a way to manipulate it => Homogeneous Coordinates.
+
 - Note that, if we use 2x2 transformation matrices, we have to multiply multiple matrices together, which leads to the confusion since different order leads to different result matrix. For example, Affine Matrix has a fixed order of matrix transformations, we cannot screw it. Thus, using 3x3 matrices help us to "pre-multiply" all transformation matrices together, and we can perform all transformations using matrix/vector multiplications.
 
 </details>
 
-### Translation
+### 3x3 Translation
 
 $$\begin{bmatrix} x\prime \cr y\prime \cr 1 \end{bmatrix}
 = \begin{bmatrix} 1 & 0 & t_x \cr 0&1&t_y \cr 0&0&1 \end{bmatrix} \begin{bmatrix} x\cr y\cr 1 \end{bmatrix}$$
 
-### Rotation
+### 3x3 Rotation
 
 $$\begin{bmatrix} x\prime \cr y\prime \cr 1 \end{bmatrix} 
 = \begin{bmatrix} x\cos{\theta} - y\sin{\theta} \cr x\sin{\theta} + y\cos{\theta} \cr 1 \end{bmatrix} 
 = \begin{bmatrix} \cos{\theta} & -\sin{\theta} & 0 \cr \sin{\theta} & \cos{\theta} & 0 \cr 0&0&1 \end{bmatrix} \begin{bmatrix} x \cr y\ \cr 1 \end{bmatrix}
 $$
 
-### Scaling
+### 3x3 Scaling
 
 $$\begin{bmatrix} x\prime \cr y\prime \cr 1 \end{bmatrix} 
 = \begin{bmatrix} s_x x \cr s_y y \cr 1 \end{bmatrix} 
