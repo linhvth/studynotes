@@ -22,8 +22,8 @@ title: My Study Notes
 email: linh.vu.200043@student.fulbright.edu.vn
 description: >- # this means to ignore newlines until "baseurl:"
   Study Notes and Learning Jouney.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://linhvth.github.io/studynotes/" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/studynotes" # the subpath of your site, e.g. /blog
+url: "https://linhvth.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: 
 github_username:  linhvth
 
