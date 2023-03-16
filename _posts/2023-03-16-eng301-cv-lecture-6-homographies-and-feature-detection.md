@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  ENG 301 - Computer Vision - Lecture 6 - Homography and Feature Detection
+title:  Homography and Feature Detection
 date:   2023-03-16
 categories: computer-vision
 permalink: /computer-vision/eng301-cv/lecture-6/
@@ -52,7 +52,7 @@ $$
 <summary>Detailed calculation for rotation</summary>
 
  <p align="center">
- 	<img src="2d-rotation.png" alt="drawing" width="500" class="center"/>
+ 	<img src="{{ site.url }}/assets/images/eng301-cv/l6-2d-rotation.png" alt="drawing" width="500" class="center"/>
  </p>
 
 $$x = r\cos{\phi} \\ y = r\sin{\phi} 
@@ -84,11 +84,11 @@ Composing Transformation is the process of applying several transformation in su
 - Projective (Affine + projective wraps)
 
  <p align="center">
-    <img src="class-2d-trans.png" alt="drawing" width="500" class="center"/>
+    <img src="{{ site.url }}/assets/images/eng301-cv/l6-class-2d-trans.png" alt="drawing" width="500" class="center"/>
  </p>
 
   <p align="center">
-    <img src="diff-trans-wrap-cmu.png" alt="drawing" width="500" class="center"/>
+    <img src="{{ site.url }}/assets/images/eng301-cv/l6-diff-trans-wrap-cmu.png" alt="drawing" width="500" class="center"/>
  </p>
 
 **Important Note:** Matrix Multiplication is associative, but not commutative. The 2 composing transformation $$\mathbf{A}\mathbf{B} \neq \mathbf{B}\mathbf{A}$$ (some cases $$\mathbf{A}\mathbf{B} = \mathbf{B}\mathbf{A}$$ such as performing rotation twice).
